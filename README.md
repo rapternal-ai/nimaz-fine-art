@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nimaz Fine Art Website
+
+A premium fine art website showcasing the leather artistry of Winfred Sr, Winfred Jr, and Nima. Built with Next.js, Tailwind CSS, and Framer Motion for a museum-quality digital experience.
+
+## Overview
+
+Nimaz Fine Art is a multi-generational leather art studio continuing the legacy of Winfred Rembert through narrative craftsmanship, contemporary expression, and custom artistry. This website serves as both a gallery and business platform for commissions, workshops, and lectures.
+
+## Features
+
+- **Museum-grade design** with clean white backgrounds and editorial spacing
+- **Artist showcase** with individual profiles and featured works
+- **Gallery** displaying the complete collection of leather artworks
+- **Commission system** for custom artwork requests
+- **Workshop & lecture booking** for educational programs
+- **Responsive design** optimized for all devices
+- **SEO optimized** with proper meta tags and structured data
+- **Accessibility compliant** with WCAG guidelines
+
+## Tech Stack
+
+- **Framework**: Next.js 16 with App Router
+- **Styling**: Tailwind CSS v4 with custom design system
+- **Animations**: Framer Motion for subtle, premium interactions
+- **Typography**: Playfair Display (serif) + Inter (sans-serif)
+- **Icons**: Lucide React
+- **Language**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+3. **Open your browser** to [http://localhost:3000](http://localhost:3000)
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── artists/           # Artist pages and individual profiles
+│   ├── gallery/           # Artwork gallery
+│   ├── commissions/       # Commission information
+│   ├── workshops-lectures/# Educational programs
+│   ├── about/            # Studio story and mission
+│   ├── contact/          # Contact form and information
+│   ├── globals.css       # Global styles and design tokens
+│   ├── layout.tsx        # Root layout with header/footer
+│   └── page.tsx          # Homepage
+├── components/
+│   ├── layout/           # Header, Footer
+│   ├── sections/         # Homepage sections
+│   └── ui/               # Reusable UI components
+public/
+├── images/
+│   ├── artists/          # Artist portrait images
+│   └── works/            # Artwork images
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Colors
+- **Background**: #ffffff (white)
+- **Foreground**: #111111 (near black)
+- **Secondary**: #555555 (gray)
+- **Border**: #eaeaea (light gray)
+- **Soft Background**: #f8f8f6 (off-white)
+- **Accent**: #8b4513 (leather brown)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Typography
+- **Headings**: Playfair Display (serif)
+- **Body**: Inter (sans-serif)
+- **Scale**: 64px/40px/24px/16px/14px
 
-## Learn More
+### Spacing
+- **Section padding**: 120px (desktop), 64px (mobile)
+- **Component spacing**: 24px/32px/48px/64px
+- **Container max-width**: 1200px
 
-To learn more about Next.js, take a look at the following resources:
+## Content Management
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Adding Images
+1. **Artist portraits**: Add to `public/images/artists/` with naming convention `artist-slug.jpg`
+2. **Artwork images**: Add to `public/images/works/` with naming convention `artwork-slug.jpg`
+3. **Recommended dimensions**:
+   - Artist portraits: 800x1000px (4:5 aspect ratio)
+   - Artwork images: 1200x1500px (4:5 aspect ratio)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Updating Content
+- **Artist information**: Edit `src/app/artists/[slug]/page.tsx`
+- **Artwork data**: Update arrays in gallery and featured works components
+- **Contact information**: Modify `src/app/contact/page.tsx`
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This website can be deployed to any platform that supports Next.js:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Vercel** (recommended): Connect your repository for automatic deployments
+- **Netlify**: Use the Next.js build command
+- **AWS/Digital Ocean**: Deploy as a Node.js application
+
+### Build Commands
+```bash
+npm run build    # Build for production
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
+
+## SEO & Performance
+
+- **Meta tags**: Configured for each page with relevant titles and descriptions
+- **Open Graph**: Social media sharing optimization
+- **Image optimization**: Next.js Image component for automatic optimization
+- **Core Web Vitals**: Optimized for Google's performance metrics
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+When making changes:
+1. Follow the established design system
+2. Maintain the premium aesthetic
+3. Ensure responsive design works across all breakpoints
+4. Test accessibility with screen readers
+5. Optimize images before adding to the project
+
+## License
+
+This project is proprietary to Nimaz Fine Art. All rights reserved.
