@@ -39,15 +39,35 @@ const Header = () => {
     };
   }, [isMobileMenuOpen]);
 
-  const navLinks = [
+  type LeafNavLink = { href: string; label: string };
+  type GroupNavLink = { label: string; children: LeafNavLink[] };
+  type NavLink = LeafNavLink | GroupNavLink;
+
+  const navLinks: NavLink[] = [
     { href: '/', label: 'Home' },
     { href: '/artists', label: 'Artists' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/commissions', label: 'Commissions' },
-    { href: '/workshops-lectures', label: 'Workshops & Lectures' },
+    {
+      label: 'Works',
+      children: [
+        { href: '/gallery', label: 'Gallery' },
+        { href: '/available-works', label: 'Available Works' },
+      ],
+    },
+    {
+      label: 'Programs',
+      children: [
+        { href: '/commissions', label: 'Commissions' },
+        { href: '/workshops-lectures', label: 'Workshops & Lectures' },
+        { href: '/collaborative-leather-murals', label: 'Collaborative Murals' },
+      ],
+    },
+    { href: '/exhibitions-events', label: 'Events' },
+    { href: '/press-media', label: 'Press / Media' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ];
+
+  const mobileLinks: LeafNavLink[] = navLinks.flatMap((link) => ('children' in link ? link.children : [link]));
 
   return (
     <>
@@ -72,16 +92,48 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center" style={{ gap: '2rem' }}>
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium text-black hover:text-gray-600 transition-colors whitespace-nowrap"
-                  style={{ padding: '0.5rem 0' }}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                if ('children' in link) {
+                  return (
+                    <div key={link.label} className="relative group pb-3 -mb-3">
+                      <button
+                        type="button"
+                        className="text-sm font-medium text-black hover:text-gray-600 transition-colors whitespace-nowrap"
+                        style={{ padding: '0.5rem 0' }}
+                        aria-haspopup="menu"
+                      >
+                        {link.label}
+                      </button>
+                      <div className="absolute left-1/2 top-full hidden -translate-x-1/2 mt-2 group-hover:block z-50">
+                        <div className="min-w-56 dropdown-panel">
+                          <div className="flex flex-col gap-1">
+                            {link.children.map((child) => (
+                              <Link
+                                key={child.href}
+                                href={child.href}
+                                className="dropdown-item whitespace-nowrap"
+                              >
+                                {child.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm font-medium text-black hover:text-gray-600 transition-colors whitespace-nowrap"
+                    style={{ padding: '0.5rem 0' }}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
 
             {/* Desktop CTA Button */}
@@ -154,7 +206,7 @@ const Header = () => {
                 {/* Mobile Navigation Links */}
                 <nav className="flex-1 py-8">
                   <div>
-                    {navLinks.map((link, index) => (
+                    {mobileLinks.map((link, index) => (
                       <motion.div
                         key={link.href}
                         initial={{ opacity: 0, x: 20 }}
