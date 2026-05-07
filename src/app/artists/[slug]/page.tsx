@@ -8,7 +8,7 @@ interface Artist {
   name: string;
   descriptor: string;
   shortBio: string;
-  fullBio: string;
+  fullBio: string[];
   slug: string;
   image: string;
   featuredWorks: Array<{
@@ -28,8 +28,11 @@ const artists: Record<string, Artist> = {
   'winfred-sr': {
     name: 'Winfred Sr',
     descriptor: 'Legacy',
-    shortBio: 'The foundational artist whose pioneering work in leather carving established the techniques and narrative traditions that define our studio today.',
-    fullBio: 'Winfred Rembert Sr. is the pioneering artist whose groundbreaking work in leather carving established the foundation of what would become Nimaz Fine Art. His innovative approach to storytelling through leather has created a unique artistic language that combines traditional craftsmanship with powerful narrative expression. Through decades of dedicated practice, he developed the techniques and aesthetic principles that continue to guide our studio today. His work serves as both artistic achievement and cultural documentation, preserving stories and experiences through the enduring medium of leather.',
+    shortBio: 'Winfred Rembert Sr. (November 22, 1945-March 31, 2021) was an internationally recognized artist known for his intricately tooled and dyed leather works depicting scenes from his life, particularly his experiences growing up in the Jim Crow South.',
+    fullBio: [
+      'Winfred Rembert (1945–2021) was a nationally acclaimed American artist known for his vivid, hand-tooled and dyed leather paintings that chronicle his life in the Jim Crow South. Born in Cuthbert, Georgia, Rembert endured forced labor in the cotton fields, survived a near-lynching, and spent seven years on a chain gang following his involvement in the Civil Rights Movement. While incarcerated, he learned leather tooling—a skill that later became the foundation of his artistic practice.',
+      'Settling in New Haven, Connecticut, Rembert transformed his personal history into powerful visual narratives depicting Southern Black life, from cotton fields to juke joints, rendered in bold color and intricate detail. His work has been exhibited in museums and galleries across the United States and is celebrated for its unflinching honesty and humanity. His posthumous memoir, Chasing Me to My Grave, was awarded the 2022 Pulitzer Prize for Biography, cementing his legacy as both an artist and storyteller of profound historical importance.',
+    ],
     slug: 'winfred-sr',
     image: '/images/artists/winfred_sr/portrait_winfred_sr.jpg',
     featuredWorks: [
@@ -94,8 +97,13 @@ const artists: Record<string, Artist> = {
   'winfred-jr': {
     name: 'Winfred Jr',
     descriptor: 'Continuation',
-    shortBio: 'Building upon his father\'s legacy, Winfred Jr expands the artistic language while honoring the core principles of storytelling through leather.',
-    fullBio: 'Winfred Rembert Jr. represents the continuation and evolution of the artistic traditions established by his father. While deeply rooted in the foundational techniques and storytelling principles of the studio, he brings his own contemporary perspective and innovative approaches to the medium. His work explores themes of generational connection, cultural continuity, and personal expression within the framework of traditional leather artistry. Through his art, he bridges the gap between established tradition and contemporary relevance, ensuring that the craft continues to speak to new audiences while maintaining its cultural authenticity.',
+    shortBio: 'Winfred Rembert Jr. (b. February 1976) continues the family’s artistic tradition through both visual art and educational programming, sharing the legacy and techniques passed down from his father while inspiring new audiences.',
+    fullBio: [
+      'Winfred Rembert Jr. is an established leather artist whose work reflects a deep commitment to narration, craftsmanship, and cultural expression. Working within the tradition of hand-tooled leather, he creates pieces that explore themes of identity, lived experience, and contemporary life, while developing a visual language that is distinctly his own.',
+      'Rooted in both heritage and innovation, Rembert Jr.’s practice honors the techniques passed down to him while expanding the possibilities of leather as a fine art medium. His work resonates for its authenticity, expressive depth, and strong sense of voice.',
+      'Honored for his contributions to education and community engagement—including receiving recognition from the U.S. Congress—Rembert Jr. plays a vital role in ensuring that his father’s story continues to resonate. His work exists at the intersection of the past and present, strengthening the continuum of the Rembert family’s place within the art world.',
+      'In addition to his studio practice, Rembert Jr. is a cultural ambassador, engaging lecturer and educator, sharing insights into the history of leather tooling, the power of personal narrative, and the importance of preserving legacy through art. Through both his artwork and public engagement, he continues to shape and define his place as a contemporary artist. Winfred Jr currently serves as Interfaith Volunteer Care Givers of Greater New Haven (IVCG) artist-in-residence, teaching seniors how to create art on leather while helping them discover and express their own artistic voice.',
+    ],
     slug: 'winfred-jr',
     image: '/images/artists/winfred_jr/portrait_winfred_jr.jpg',
     featuredWorks: [
@@ -142,8 +150,13 @@ const artists: Record<string, Artist> = {
   'nima': {
     name: 'Nima',
     descriptor: 'Evolution',
-    shortBio: 'The newest voice in our studio, bringing contemporary perspectives and innovative approaches to the traditional craft of leather artistry.',
-    fullBio: 'Nima represents the newest generation of artists at Nimaz Fine Art, bringing fresh perspectives and innovative approaches to the traditional craft of leather artistry. With a background in contemporary art and design, Nima pushes the boundaries of what leather art can be while respecting the foundational principles established by the studio. Their work explores themes of identity, cultural evolution, and the intersection of tradition with modernity. Through experimental techniques and contemporary subject matter, Nima ensures that the art form continues to evolve and remain relevant for future generations.',
+    shortBio: 'Nima Rembert (b. December 2017) is an emerging young artist whose work reflects imagination, individuality, and the early spark of a powerful creative voice.',
+    fullBio: [
+      'Nima Rembert is an emerging young artist whose creativity reflects the continuation of a powerful artistic lineage. At just eight years old, she is already developing her own voice through imaginative and expressive work, marking her first public exhibition. As the granddaughter of Winfred Rembert Sr., Nima represents the next generation of storytelling through art.',
+      'Her work reflects both imagination and a meaningful connection to her family’s artistic legacy through creations that transform everyday materials into expressions of joy and play.',
+      'Nima’s work carries a subtle but powerful link to the past: her grandfather, Winfred Rembert, once labored in Southern cotton fields and later depicted those experiences in his celebrated leather paintings. Today, Nima reimagines that same material—cotton—through a lens of creativity and innocence, using it in her plushies to tell stories of her own.',
+      'Through this transformation, Nima’s art bridges generations, turning a material once tied to hardship into one of softness, imagination, and new beginnings. Her work stands as a testament to how legacy evolves—carried forward not only through memory, but through reinvention, creativity, and the boundless perspective of youth.',
+    ],
     slug: 'nima',
     image: '/images/artists/nima.jpg',
     featuredWorks: [
@@ -247,9 +260,11 @@ export default async function ArtistPage({ params }: { params: Promise<{ slug: s
               Biography
             </h2>
             <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-secondary leading-relaxed">
-                {artist.fullBio}
-              </p>
+              {artist.fullBio.map((paragraph) => (
+                <p key={paragraph} className="text-lg text-secondary leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
         </div>

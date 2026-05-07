@@ -12,21 +12,21 @@ const artists = [
   {
     name: 'Winfred Sr',
     descriptor: 'Legacy',
-    shortBio: 'The foundational artist whose pioneering work in leather carving established the techniques and narrative traditions that define our studio today.',
+    shortBio: 'Winfred Rembert Sr. (November 22, 1945-March 31, 2021) was an internationally recognized artist known for his intricately tooled and dyed leather works depicting scenes from his life, particularly his experiences growing up in the Jim Crow South.',
     slug: 'winfred-sr',
     image: '/images/artists/winfred_sr/portrait_winfred_sr.jpg'
   },
   {
     name: 'Winfred Jr',
     descriptor: 'Continuation',
-    shortBio: 'Building upon his father\'s legacy, Winfred Jr expands the artistic language while honoring the core principles of storytelling through leather.',
+    shortBio: 'Winfred Rembert Jr. (b. February 1976) continues the family’s artistic tradition through both visual art and educational programming, sharing the legacy and techniques passed down from his father while inspiring new audiences.',
     slug: 'winfred-jr',
     image: '/images/artists/winfred_jr/portrait_winfred_jr.jpg'
   },
   {
     name: 'Nima',
     descriptor: 'Evolution',
-    shortBio: 'The newest voice in our studio, bringing contemporary perspectives and innovative approaches to the traditional craft of leather artistry.',
+    shortBio: 'Nima Rembert (b. December 2017) is an emerging young artist whose work reflects imagination, individuality, and the early spark of a powerful creative voice. At just 8 years old, this exhibition marks her first public showcase.',
     slug: 'nima',
     image: '/images/artists/nima.jpg'
   }
