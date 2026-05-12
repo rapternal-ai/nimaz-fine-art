@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Button from '../ui/Button';
 
 const AboutLegacy = () => {
@@ -41,8 +42,14 @@ const AboutLegacy = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="aspect-[4/5] bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
-              <span className="text-gray-500 text-sm">Legacy Image</span>
+            <div className="aspect-[4/5] relative bg-gray-100 overflow-hidden">
+              <Image
+                src="/images/artists/winfred_sr/legacy_winfred_sr1.png"
+                alt="Winfred Rembert Sr. legacy"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </motion.div>
         </div>

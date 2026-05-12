@@ -90,6 +90,18 @@ ul {
 .border.border-border.p-8 {
     margin-bottom: 1.5rem;
 }
+
+a.block.text-black.hover\:text-gray-600.transition-colors.border-b.border-gray-300.hover\:border-gray-600.pb-1 {
+    padding: 20px 0;
+}
+
+.event-link {
+    padding: 20px 0;
+}
+
+p.text-lg.text-gray-600.leading-relaxed {
+    padding: 20px 0;
+}
 .grid.grid-cols-1.lg\:grid-cols-3.gap-8 {
     padding: 1.1rem;
 }

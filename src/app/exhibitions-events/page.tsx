@@ -29,23 +29,18 @@ export default function ExhibitionsEventsPage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h2 className="text-3xl md:text-4xl font-serif text-black heading-spacing-top">
-                  Upcoming Events
+                  Current Events
                 </h2>
-                <p className="text-lg text-gray-600 leading-relaxed text-constrained">
-                  Updates coming soon. Contact us if you’d like to host an event, program, or exhibition.
-                </p>
-                <Link href="/contact" className="inline-block">
-                  <Button variant="outline" size="lg">Contact Us</Button>
-                </Link>
-              </div>
-
-              <div className="space-y-4">
-                <h2 className="text-3xl md:text-4xl font-serif text-black heading-spacing-top">
-                  Whitney Center Show
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed text-constrained">
-                  Details will be added here. If you have dates, location info, and a short summary, send it over and I’ll format it.
-                </p>
+                <div className="space-y-3 text-lg text-gray-600 leading-relaxed">
+                  <Link
+                    href="https://www.connecticutpublicgardens.org/programs/yr4-leather"
+                    className="event-link block text-black hover:text-gray-600 transition-colors border-b border-gray-300 hover:border-gray-600"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Year 4 Leather Collaborative Mural Program
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -55,7 +50,22 @@ export default function ExhibitionsEventsPage() {
                   Past Exhibitions
                 </h2>
                 <div className="space-y-3 text-lg text-gray-600 leading-relaxed">
-                  <p>Coming soon.</p>
+                  <Link
+                    href="https://www.givecampus.com/schools/QuinnipiacUniversity/events/in-conversation-with-winfred-rembert-jr"
+                    className="event-link block text-black hover:text-gray-600 transition-colors border-b border-gray-300 hover:border-gray-600"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    In Conversation with Winfred Rembert Jr. at Quinnipiac University
+                  </Link>
+                  <Link
+                    href="https://www.hauserwirth.com/news/winfred-remberts-exhibition-inspires-collaboration-with-AHJN/"
+                    className="event-link block text-black hover:text-gray-600 transition-colors border-b border-gray-300 hover:border-gray-600"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Winfred Rembert Exhibition Inspires Collaboration with Art for Healing Justice Network
+                  </Link>
                 </div>
               </div>
 
@@ -63,7 +73,7 @@ export default function ExhibitionsEventsPage() {
                 <h2 className="text-3xl md:text-4xl font-serif text-black heading-spacing-top">
                   Event Inquiries
                 </h2>
-                <p className="text-lg text-gray-600 leading-relaxed text-constrained">
+                <p className="text-lg text-gray-600 leading-relaxed">
                   Interested in booking a talk, hosting an exhibition, or partnering on a community program?
                 </p>
                 <Link href="/contact" className="inline-block">

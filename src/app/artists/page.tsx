@@ -28,7 +28,7 @@ const artists = [
     descriptor: 'Evolution',
     shortBio: 'Nima Rembert (b. December 2017) is an emerging young artist whose work reflects imagination, individuality, and the early spark of a powerful creative voice. At just 8 years old, this exhibition marks her first public showcase.',
     slug: 'nima',
-    image: '/images/artists/nima.jpg'
+    image: '/images/artists/nima/nima_portrait1.JPG'
   }
 ];
 
@@ -54,7 +54,7 @@ export default function ArtistsPage() {
       <section className="bg-gray-50" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: '3rem' }}>
-            {artists.map((artist, index) => (
+            {artists.map((artist) => (
               <Link
                 key={artist.slug}
                 href={`/artists/${artist.slug}`}
@@ -62,10 +62,14 @@ export default function ArtistsPage() {
               >
                 <div className="space-y-6">
                   {/* Image */}
-                  <div className="aspect-[4/5] bg-gradient-to-br from-gray-200 to-gray-100 overflow-hidden group-hover:shadow-lg transition-all duration-300">
-                    <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <span className="text-gray-500 text-sm">Artist Portrait</span>
-                    </div>
+                  <div className="aspect-[4/5] relative bg-gray-100 overflow-hidden group-hover:shadow-lg transition-all duration-300">
+                    <Image
+                      src={artist.image}
+                      alt={artist.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                    />
                   </div>
 
                   {/* Content */}
