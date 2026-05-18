@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Button from '@/components/ui/Button';
+import ContactForm from '@/components/forms/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact | Nimaz Fine Art',
@@ -17,8 +17,8 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed text-constrained">
-              We'd love to hear from you. Whether you're interested in commissioning a piece, 
-              attending a workshop, or learning more about our craft, we're here to help.
+              We&rsquo;d love to hear from you. Whether you&rsquo;re interested in commissioning a piece, 
+              attending a workshop, or learning more about our craft, we&rsquo;re here to help.
             </p>
           </div>
         </div>
@@ -34,97 +34,7 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
               
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="form-group">
-                    <label htmlFor="firstName" className="form-label">
-                      First Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      className="form-input"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="lastName" className="form-label">
-                      Last Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      required
-                      className="form-input"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="form-label">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="form-input"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="form-label">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="form-input"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="inquiryType" className="block text-sm font-medium text-foreground mb-2">
-                    Type of Inquiry *
-                  </label>
-                  <select
-                    id="inquiryType"
-                    name="inquiryType"
-                    required
-                    className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:border-transparent"
-                  >
-                    <option value="">Select an option</option>
-                    <option value="commission">Commission Inquiry</option>
-                    <option value="workshop">Workshop Information</option>
-                    <option value="lecture">Lecture Booking</option>
-                    <option value="purchase">Purchase Existing Work</option>
-                    <option value="press">Press & Media</option>
-                    <option value="general">General Question</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    placeholder="Tell us about your project, question, or how we can help you..."
-                    className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:border-transparent resize-vertical"
-                  ></textarea>
-                </div>
-
-                <Button type="submit" size="lg" className="w-full">
-                  Send Message
-                </Button>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Contact Information */}
@@ -242,7 +152,7 @@ export default function ContactPage() {
 
               <div className="border-b border-border pb-6">
                 <h3 className="text-xl font-serif text-foreground mb-3">
-                  What's the best way to describe my commission idea?
+                  What&rsquo;s the best way to describe my commission idea?
                 </h3>
                 <p className="text-secondary leading-relaxed">
                   The more details you can provide, the better. Tell us about the story 
@@ -259,7 +169,7 @@ export default function ContactPage() {
                 <p className="text-secondary leading-relaxed">
                   Yes, we can work with you on payment arrangements for larger commissions. 
                   Typically, we require a deposit to begin work with the balance due upon 
-                  completion, but we're flexible based on your needs.
+                  completion, but we&rsquo;re flexible based on your needs.
                 </p>
               </div>
             </div>
@@ -275,7 +185,7 @@ export default function ContactPage() {
               Find Our Studio
             </h2>
             <p className="text-lg text-secondary">
-              Located in Atlanta's vibrant Creative District
+              Located in Atlanta&rsquo;s vibrant Creative District
             </p>
           </div>
           

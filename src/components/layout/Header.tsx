@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../ui/Button';
 
@@ -84,10 +85,17 @@ const Header = () => {
             {/* Logo */}
             <Link 
               href="/" 
-              className="text-2xl font-serif font-medium text-black hover:text-gray-600 transition-colors z-60"
+              className="z-60 inline-flex items-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Nimaz Fine Art
+              <Image
+                src="/logo.png"
+                alt="Nimaz Fine Art"
+                width={128}
+                height={128}
+                priority
+                className="h-28 w-28 object-contain"
+              />
             </Link>
 
             {/* Desktop Navigation */}

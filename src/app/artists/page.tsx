@@ -28,7 +28,7 @@ const artists = [
     descriptor: 'Evolution',
     shortBio: 'Nima Rembert (b. December 2017) is an emerging young artist whose work reflects imagination, individuality, and the early spark of a powerful creative voice. At just 8 years old, this exhibition marks her first public showcase.',
     slug: 'nima',
-    image: '/images/artists/nima/nima_portrait1.JPG'
+    image: '/images/artists/nima/nima_portrait1.jpg'
   }
 ];
 

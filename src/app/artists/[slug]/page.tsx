@@ -158,25 +158,61 @@ const artists: Record<string, Artist> = {
       'Through this transformation, Nima’s art bridges generations, turning a material once tied to hardship into one of softness, imagination, and new beginnings. Her work stands as a testament to how legacy evolves—carried forward not only through memory, but through reinvention, creativity, and the boundless perspective of youth.',
     ],
     slug: 'nima',
-    image: '/images/artists/nima/nima_portrait1.JPG',
+    image: '/images/artists/nima/nima_portrait1.jpg',
     featuredWorks: [
       {
         id: 5,
-        title: 'Contemporary Voices',
-        year: '2023',
-        medium: 'Carved and dyed leather with mixed media',
-        dimensions: '36" x 24"',
-        image: '/images/works/contemporary-voices.jpg',
-        description: 'A mixed-media exploration of contemporary identity.'
+        title: 'Portfolio Work 01',
+        year: '2025',
+        medium: 'Mixed media',
+        dimensions: 'Dimensions available upon request',
+        image: '/images/artists/nima/portfolio-01.jpg',
+        description: 'A portfolio work by Nima Rembert.'
       },
       {
         id: 6,
-        title: 'Future Traditions',
-        year: '2023',
-        medium: 'Carved and dyed leather',
-        dimensions: '40" x 30"',
-        image: '/images/works/future-traditions.jpg',
-        description: 'Reimagining traditional themes for modern audiences.'
+        title: 'Portfolio Work 02',
+        year: '2025',
+        medium: 'Mixed media',
+        dimensions: 'Dimensions available upon request',
+        image: '/images/artists/nima/portfolio-02.png',
+        description: 'A portfolio work by Nima Rembert.'
+      },
+      {
+        id: 7,
+        title: 'Portfolio Work 03',
+        year: '2025',
+        medium: 'Mixed media',
+        dimensions: 'Dimensions available upon request',
+        image: '/images/artists/nima/portfolio-03.jpg',
+        description: 'A portfolio work by Nima Rembert.'
+      },
+      {
+        id: 8,
+        title: 'Portfolio Work 04',
+        year: '2025',
+        medium: 'Mixed media',
+        dimensions: 'Dimensions available upon request',
+        image: '/images/artists/nima/portfolio-04.jpg',
+        description: 'A portfolio work by Nima Rembert.'
+      },
+      {
+        id: 9,
+        title: 'Portfolio Work 05',
+        year: '2025',
+        medium: 'Mixed media',
+        dimensions: 'Dimensions available upon request',
+        image: '/images/artists/nima/portfolio-05.jpg',
+        description: 'A portfolio work by Nima Rembert.'
+      },
+      {
+        id: 10,
+        title: 'Portfolio Work 06',
+        year: '2025',
+        medium: 'Mixed media',
+        dimensions: 'Dimensions available upon request',
+        image: '/images/artists/nima/portfolio-06.png',
+        description: 'A portfolio work by Nima Rembert.'
       }
     ],
     exhibitions: ['New Voices in Craft (2023)']

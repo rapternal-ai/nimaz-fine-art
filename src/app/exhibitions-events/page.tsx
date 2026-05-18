@@ -40,6 +40,9 @@ export default function ExhibitionsEventsPage() {
                   >
                     Year 4 Leather Collaborative Mural Program
                   </Link>
+                  <p className="text-base text-gray-500">
+                    November 2025 - May 2026
+                  </p>
                 </div>
               </div>
             </div>
