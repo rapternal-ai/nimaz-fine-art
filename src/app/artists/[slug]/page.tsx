@@ -158,7 +158,7 @@ const artists: Record<string, Artist> = {
       'Through this transformation, Nima’s art bridges generations, turning a material once tied to hardship into one of softness, imagination, and new beginnings. Her work stands as a testament to how legacy evolves—carried forward not only through memory, but through reinvention, creativity, and the boundless perspective of youth.',
     ],
     slug: 'nima',
-    image: '/images/artists/nima/nima_portrait1.jpg',
+    image: '/images/artists/nima/nima_portrait1.JPG',
     featuredWorks: [
       {
         id: 5,
